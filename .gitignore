@@ -57,5 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
+app/env_example.js
 app/env.js
 
