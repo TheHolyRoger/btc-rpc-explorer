@@ -23,12 +23,12 @@ module.exports = {
 			decimalPlaces:5
 		}
 	],
-	genesisBlockHash: "12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2",
-	genesisCoinbaseTransactionId: "97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9",
+	genesisBlockHash: "84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6",
+	genesisCoinbaseTransactionId: "85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f",
 	genesisCoinbaseTransaction: {
-		"txid":"97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9",
-		"hash":"97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9",
-		"blockhash":"12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2",
+		"txid":"85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f",
+		"hash":"85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f",
+		"blockhash":"84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6",
 		"version":1,
 		"locktime":0,
 		"size":199,
@@ -41,7 +41,7 @@ module.exports = {
 					"hash":"0000000000000000000000000000000000000000000000000000000000000000",
 					"n":4294967295
 				},
-				"coinbase":"04ffff001d0104404e592054696d65732030352f4f63742f32303131205374657665204a6f62732c204170706c65e280997320566973696f6e6172792c2044696573206174203536"
+				"coinbase":"04ffff001d01043c552e532e2053757370656e6473204e65772054617269666673206f6e204368696e612c2053746f6b696e6720576869746520466c6167204665617273"
 			}
 		],
 		"vout":[
@@ -70,14 +70,14 @@ module.exports = {
 	historicalData: [
 		{
 			type: "block",
-			date: "2011-10-07",
-			blockHash: "12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2",
+			date: "2018-05-20",
+			blockHash: "84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6",
 			note: "The Holy Roger Coin genesis block.",
 			referenceUrl: "https://medium.com/@SatoshiLite/satoshilite-1e2dad89a017"
 		},
 		{
 			type: "tx",
-			date: "2017-05-10",
+			date: "2018-05-21",
 			txid: "ce385e55fb2a73fa438426145b074f08314812fa3396472dc572b3079e26e0f9",
 			note: "First SegWit transaction.",
 			referenceUrl: "https://twitter.com/satoshilite/status/862345830082138113"
