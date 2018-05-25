@@ -1,9 +1,81 @@
 var utils = require("./utils.js");
 var env = require("./env.js");
 var coins = require("./coins.js");
+var Datastore = require('nedb');
 
 
 
+
+function db(dbname="explorer") {
+  return new Datastore({ filename: '../'+dbname+'.db', autoload: true });
+}
+
+function scanBlockHash(hash) {
+  var nextBlock,
+      height,
+      tx,
+      height;
+  var limit = 20;
+	var offset = 0;
+//  getBlockByHash(hash).then(function(blockByHash) {
+//    nextBlock = blockByHash.nextblockhash;
+//    height = blockByHash.height;
+//    tx = blockByHash.tx;
+//    height = blockByHash.height;
+//    scanTXs(tx);
+//  });
+  getBlockData(client, hash, limit, offset).then(function(result) {
+//    res.locals.result.getblock = result.getblock;
+//    res.locals.result.transactions = result.transactions;
+//    res.locals.result.txInputsByTransaction = result.txInputsByTransaction;
+    console.log(result);
+    nextBlock = result.getblock.nextblockhash;
+    height = result.getblock.height;
+    tx = result.getblock.tx;
+    height = result.getblock.height;
+    result.transactions.forEach(function(theTX) {
+      console.log("@@@");
+//      console.log(theTX.txid);
+//      console.log(theTX.hash);
+//      console.log(theTX.vin);
+//      console.log(theTX.vout);
+      theTX.vout.forEach(function(txout) {
+        if (txout.value > 0) {
+          var transaction_to = {
+            in_tx: theTX.txid,
+            in_block: theTX.blockhash,
+            amount: theTX.value,
+            to: theTX.txid,
+          }
+          console.log("ROGER:");
+          console.log(txout.value);
+          console.log("To:");
+          console.log(txout.scriptPubKey.addresses[0]);
+        }
+      })
+      console.log(theTX.blockhash);
+    });
+  });
+}
+
+function loadBlocks() {
+  var dbLastBlock = db("lastblock");
+  var dbBlocks = db("blocks");
+  var dbTransactions = db("transactions");
+  var lastblock;
+  dbLastBlock.find({ 
+    lastblock: "lastblock" 
+  }, function(err,blocks) {
+    if (blocks === undefined || blocks.length == 0) {
+      lastblock = false //readBlockHash(getGenesisBlockHash())
+    } else {
+      lastblock = blocks[0].lastblockhash
+    }
+  });
+  if (!lastblock) {
+    lastblock = scanBlockHash(getGenesisBlockHash())
+  }
+}
 
 function getGenesisBlockHash() {
 	return coins[env.coin].genesisBlockHash;
