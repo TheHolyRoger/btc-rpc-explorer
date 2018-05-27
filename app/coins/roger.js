@@ -23,18 +23,18 @@ module.exports = {
 			decimalPlaces:5
 		}
 	],
-	genesisBlockHash: "84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6",
-	genesisCoinbaseTransactionId: "85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f",
+	genesisBlockHash: "efdcf5b2eece13c846fad57cef0eb5cbc07076dc90cf125a1b78625bda84b99f",
+	genesisCoinbaseTransactionId: "7295c791d735679ec7578c74881458876ac8e696d6683311b482862306879544",
 	genesisCoinbaseTransaction: {
-		"txid":"85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f",
-		"hash":"85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f",
-		"blockhash":"84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6",
+		"txid":"7295c791d735679ec7578c74881458876ac8e696d6683311b482862306879544",
+		"hash":"7295c791d735679ec7578c74881458876ac8e696d6683311b482862306879544",
+		"blockhash":"efdcf5b2eece13c846fad57cef0eb5cbc07076dc90cf125a1b78625bda84b99f",
 		"version":1,
 		"locktime":0,
 		"size":199,
 		"vsize":199,
-		"time":1317972665,
-		"blocktime":1317972665,
+		"time":1527430983,
+		"blocktime":1527430983,
 		"vin":[
 			{
 				"prev_out":{
@@ -49,11 +49,11 @@ module.exports = {
 				"value":"50.00000000",
 				"n":0,
 				"scriptPubKey":{
-					"hex":"040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9 OP_CHECKSIG",
+					"hex":"04B99291FD5963B92F914F3ADB533605ECE67A9F4A4120CED4D8CB2E68C74AD5150D4EB228AE2103A693D4A4088A49A0526AE873D8EFD8CB84CF86246F9B8CF948 OP_CHECKSIG",
 					"type":"pubkey",
 					"reqSigs":1,
 					"addresses":[
-						"Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2"
+						"RrffPHbMGidU1yo5WguAmAZGEbGherNKjd"
 					]
 				}
 			}
@@ -70,8 +70,8 @@ module.exports = {
 	historicalData: [
 		{
 			type: "block",
-			date: "2018-05-20",
-			blockHash: "84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6",
+			date: "2018-05-27",
+			blockHash: "efdcf5b2eece13c846fad57cef0eb5cbc07076dc90cf125a1b78625bda84b99f",
 			note: "The Holy Roger Coin genesis block.",
 			referenceUrl: "https://medium.com/@SatoshiLite/satoshilite-1e2dad89a017"
 		},
